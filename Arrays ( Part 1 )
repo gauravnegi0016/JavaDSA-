@@ -1,0 +1,92 @@
+// 01 Introduction
+
+/*
+    // Definition of an Array 
+        Array is a list of elements of the same type
+        placed in a contiguous memory locatin 
+*/
+
+// 02 Arrays - Creation 
+
+/* 
+    // Operations in Arrays 
+        * Create
+        * Input 
+        * Output 
+        * Update
+ */
+
+/* 
+    // Creating an Array 
+        dataType arrayName[] = new dataType[size];
+        int marks[] = new int[50];
+        int number[] = {1,2,3};
+        int moreNumber[] = {4,5,6};
+        String furits[] = {"apple" , "mengo" , "orange"};
+*/
+
+import java.util.*;
+
+public class ArraysCC {  // CC = ClassroomCode
+    public static void main(String args[]) {
+        
+        int marks[] = new int[50];
+        int numbers[] = {1,2,3};
+        int morenumbers[] = {4,5,6};
+        String fruits[] = {"apple", "mengo", "orange"};
+    }    
+}
+
+// 03 Arrays - Input , Output & Update 
+
+/*
+    // Input / Output 
+*/
+
+import java.util.*;
+
+public class ArraysCC { 
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        
+        // int phy;
+        // phy = sc.nextInt();
+
+        int marks[] = new int[100];
+
+        marks[0] = sc.nextInt(); // phys
+        marks[1] = sc.nextInt(); // chem
+        marks[2] = sc.nextInt(); // math
+
+        System.out.println("phys : " + marks[0]);
+        System.out.println("chem : " + marks[1]);
+        System.out.println("math : " + marks[2]);
+  
+        marks[2] = 100; // marks[2] = marks[2] + 1;
+        System.out.println("math : " + marks[2]);
+  
+        int percentage = (marks[0] + marks [1] + marks[2]) / 3;
+        System.out.println("percentage =" + percentage + "%");
+    }
+}   
+
+/*
+    // Length of the array 
+        int arr[] = new int [5];
+        int arrayLength = arr.length;
+*/
+
+import java.util.*;
+
+public class ArraysCC { 
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+   
+        int marks[] = new int [5];
+        
+        System.out.println("length of array =" + marks.length);
+        
+        int marksLength = marks.length;
+        System.out.println("length of marksArray =" + marksLength);
+    }
+}
