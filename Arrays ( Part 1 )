@@ -141,10 +141,135 @@ public class ArraysCC {
 // 05 Linear Search
 
 /*
+    // Linear Search	// Time complexity = O(n)
+    find the index of element in a given array 
+                    Key = 10 
+    {2,4,6,8,10,12,14,16}
+*/
+
+import java.util.*;
+// Linear Search 
+public class ArraysCC { 
+
+    public static int linearSearch(int numbers[], int key) {
+
+        for (int i=0; i<numbers.length; i++) {
+            if(numbers[i] == key) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String args[]) {
+        
+        int numbers[] = {2,4,6,8,10,12,14,16};
+        int key = 10;
+        
+        int index = linearSearch(numbers, key);
+        if(index == -1) {
+            System.out.println("Not found");
+        } else {
+            System.out.println("key is at index :" + index);
+        }
+    }
+}
+
+// 06 Largest in Array
+
+/*
+    // Largest Number   // Time complexity = O(n)
+    Find the largest number in a given array
+    {1,2,6,3,5}
+*/
+
+/*  
+    - infinity = Integer.MIN_VALUE
+    + Infinity = integer.MAX_VALUE
+*/ 
+
+import java.util.*;
+// Latgest Number in Array  
+public class ArraysCC {
+
+    public static int getLargest(int numbers[]) {
+
+        int largest = Integer.MIN_VALUE;
+        int smallest = Integer.MAX_VALUE;
+
+        for(int i=0; i<numbers.length; i++) {
+            if(largest < numbers[i]) {
+                largest = numbers[i];
+            }
+            if(smallest > numbers[i]) {
+                smallest = numbers[i];
+            }
+        }
+        System.out.println("smallest value is :" + smallest);
+        return largest;
+    }
+
+    public static void main(String args[]) {
+        
+        int numbers[] = {1,2,6,3,5};
+        System.out.println("Largest value is :" + getLargest(numbers));
+    }
+}
+
+// 04 Arrays as Function Arguments
+
+/*
+    // Passing arrays as argument
+*/
+
+import java.util.*;
+
+public class ArraysCC { 
+    
+    public static void update(int marks[]) {    // Call by reference
+        
+        for(int i=0; i<marks.length; i++) {
+            marks[i] = marks[i] + 1;
+        }
+    }
+    
+    public static void main(String args[]) {
+        
+        int marks[] = {97,98,99};
+        update(marks);
+
+        // print our marks 
+        for(int i=0; i<marks.length; i++) {
+            System.out.print(marks[i]+" ");
+        }
+        System.out.println();
+    } 
+}
+
+import java.util.*;
+
+public class ArraysCC { 
+    
+    public static void nonChangable(int nonChangable) {
+        
+        nonChangable = 10;
+    }
+
+    public static void main(String args[]) {
+        
+        int nonChangable = 5;
+        nonChangable(nonChangable);
+        System.out.println(nonChangable);
+    }
+}
+
+// 05 Linear Search
+
+/*
     // Linear Search    // Time complexity = O(n)
-        find the index of element in a given array 
-                        Key = 10 
-        {2,4,6,8,10,12,14,16}
+    find the index of element in a given array 
+                    Key = 10 
+    {2,4,6,8,10,12,14,16}
 */
 
 import java.util.*;
@@ -179,8 +304,8 @@ public class ArraysCC {
 
 /*
     // Largest Number   // Time complexity = O(n)
-        Find the largest number in a given array
-        {1,2,6,3,5}
+    Find the largest number in a given array
+    {1,2,6,3,5}
 */
 
 /*  
@@ -213,176 +338,5 @@ public class ArraysCC {
         
         int numbers[] = {1,2,6,3,5};
         System.out.println("Largest value is :" + getLargest(numbers));
-    }
-}
-
-// 07 Binary Search
-
-/*
-    // Binary Search    // Time Complexity = O(log n)
-        Prerequisite - Sorted arrays
-                        Key = 10
-        {2,4,6,8,10,12,14}
-*/
-
-/*
-    // Pseudo Code 
-        start=0 , end=n-1
-        while(start <= end)
-            find mid
-            compare mid & key 
-                mid == key Found
-                mid > key Left 
-                mid < key Right 
-*/
-
-
-// 08 Binary Search Code
-
-import java.util.*;
-
-public class ArraysCC {
-
-    public static int binarySearch(int numbers[], int key) {
-        
-        int start = 0, end = numbers.length-1;
-
-        while(start <= end) {
-            int mid = (start + end) / 2;
-            
-            // Comparisons
-            if(numbers[mid] == key) { // found
-                return mid;
-            }
-            if(numbers[mid] < key) { // right
-                start = mid+1;
-            } else { // left
-                end = mid-1;
-            }   
-        }
-
-        return -1;
-    }
-
-    public static void main(String args[]) {
-
-        int numbers[] = {2,4,6,8,10,12,14};
-        int key = 10;
-
-        System.out.println("index for key is :" + binarySearch(numbers, key));
-    }
-}
-
-// 09 Reverse an Array 
-
-/*
-    // Reverse an Array     // Time Complexity = O(n)    // Space complexity = Constant(1)
-        {2,4,6,8,10}
-*/
-
-import java.util.*;
-
-public class ArraysCC {
-    public static void reverse(int numbers[]) {
-       
-        int first = 0, last = numbers.length-1;
-
-        while(first < last) {
-            // Swap
-            int temp = numbers[last];
-            numbers[last] = numbers[first];
-            numbers[first] = temp;
-        
-            first++;
-            last--;
-        }
-    }
-
-    public static void main (String args[]) {
-        
-        int numbers[] = {2,4,6,8,10};
-        reverse(numbers);
-        
-        // Print 
-        for(int i=0; i<numbers.length; i++) {
-            System.out.print(numbers[i]+" ");
-        }
-        System.out.println();
-    }
-}
-
-// 10 Pairs in Array 
-
-/*
-    // Pairs in an Array    // Time Complexity = O(n^2)
-        {2,4,6,8,10}
-        (2,4) (2,6) (2,8) (2,10)
-        (4,6) (4,8) (4,10)    
-        (6,8) (6,10) 
-        (8,10)
-*/
-
-import java.util.*;
-
-public class ArraysCC {
-
-    public static void printPairs(int numbers[]) {
-
-        int tp = 0; // Total Pairs
-
-        for(int i=0; i<numbers.length; i++) {
-            int curr = numbers[i]; //2, 4, 6, 8, 10
-            for(int j=i+1; j<numbers.length; j++) {
-                System.out.print("(" + curr + "," + numbers[j] + ")");
-                tp++;
-        }
-        System.out.println();
-    }
-    System.out.println("Total Pairs =" + tp);
-}
-
-    public static void main (String args[]) {
-
-        int numbers[] = {2,4,6,8,10};
-        printPairs(numbers);
-    
-    }
-}
-
-// 11 Print Subarrays
-
-/*
-    // Print Subarray 
-        A continuous part of array
-        {2,4,6,8,10}
-*/
-
-import java.util.*;
-
-public class ArraysCC {
-
-    public static void printSubarrays(int numbers[]) {
-
-        int ts = 0; // Totalo Subarrays
-        for(int i=0; i<numbers.length; i++) {
-            int start = i;
-            for(int j=i; j<numbers.length; j++) {
-                int end = j;
-                for(int k=start; k<=end; k++) { // Print
-                    System.out.print(numbers[k]+" "); // Subarray
-                }
-                ts++;
-                System.out.println();
-            }
-            System.out.println();
-        }
-
-        System.out.println("Total Subarrays = " + ts);
-    }
-
-    public static void main (String args[]) {
-
-        int numbers[] = {2,4,6,8,10};
-        printSubarrays(numbers);
     }
 }
