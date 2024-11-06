@@ -100,7 +100,6 @@ public class ArraysCC {
 import java.util.*;
 
 public class ArraysCC { 
-    
     public static void update(int marks[]) {    // Call by reference
         
         for(int i=0; i<marks.length; i++) {
@@ -124,7 +123,6 @@ public class ArraysCC {
 import java.util.*;
 
 public class ArraysCC { 
-    
     public static void nonChangable(int nonChangable) {
         
         nonChangable = 10;
@@ -150,7 +148,6 @@ public class ArraysCC {
 import java.util.*;
 
 public class ArraysCC { 
-
     public static int linearSearch(int numbers[], int key) {
 
         for (int i=0; i<numbers.length; i++) {
@@ -191,7 +188,6 @@ public class ArraysCC {
 import java.util.*;
  
 public class ArraysCC {
-
     public static int getLargest(int numbers[]) {
 
         int largest = Integer.MIN_VALUE;
@@ -242,7 +238,6 @@ public class ArraysCC {
 import java.util.*;
 
 public class ArraysCC {
-
     public static int binarySearch(int numbers[], int key) {
         
         int start = 0, end = numbers.length-1;
@@ -325,7 +320,6 @@ public class ArraysCC {
 import java.util.*;
 
 public class ArraysCC {
-
     public static void printPairs(int numbers[]) {
 
         int tp = 0; // Total Pairs
@@ -360,7 +354,6 @@ public class ArraysCC {
 import java.util.*;
 
 public class ArraysCC {
-
     public static void printSubarrays(int numbers[]) {
 
         int ts = 0; // Totalo Subarrays
