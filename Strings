@@ -1,0 +1,35 @@
+// 01 What are Strings ?
+
+/*
+    // STRINGS
+        Words, Sentences, Paragraphs
+*/
+
+/*
+    // What are Strings ? 
+*/
+
+import java.util.*;
+
+public class Strings {
+    public static void main(String args[]) {
+        char arr[] = {'a', 'b', 'c', 'd'};
+        String str = "abcd";
+        String str2 = new String("xyz@#123");
+
+        // String are IMMUTALE
+    }
+}
+
+// 02 Input / Output
+
+import java.util.*;
+
+public class Strings {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String name;
+        name = sc.next(); // sc.nextLine();
+        System.out.println(name);
+    }
+}
