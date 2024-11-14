@@ -33,3 +33,48 @@ public class Strings {
         System.out.println(name);
     }
 }
+
+// 03 String Length
+
+import java.util.*;
+
+public class Strings {
+    public static void main(String args[]) {
+        String fullName = "Tony Stark";
+        System.out.println(fullName.length());
+    }
+}
+
+// 04 String Concatenate
+
+import java.util.*;
+
+public class Strings {
+    public static void main(String args[]) {
+        // concatenation
+        String firstName = "Shradha";
+        String lastName = "Khapra";
+        String fullName = firstName + " " + lastName;
+        System.out.println(fullName + " is this");
+    }
+}
+
+// 05 String charAt Method
+
+import java.util.*;
+
+public class Strings {
+    public static void printLetters(String str) {
+        for(int i=0; i<str.length(); i++) {
+            System.out.print(str.charAt(i) + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String args[]) {
+        String firstName = "Shradha";
+        String lastName = "Khapra";
+        String fullName = firstName + " " + lastName;
+        // System.out.print(fullName.charAt(1));
+        printLetters(fullName);
+    }
+}
