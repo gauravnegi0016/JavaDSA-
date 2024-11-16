@@ -180,3 +180,58 @@ public class Strings {
         }
     }
 }
+
+// 09 String Functions - substring
+
+/*
+    // String Functions
+        Substring
+*/
+
+import java.util.*;
+
+public class Strings {
+    public static String substring(String str, int si, int ei) {
+        String substr = "";
+        for(int i=si; i<ei; i++) {
+            substr += str.charAt(i);
+        }
+        return substr;
+    }
+    public static void main(String args[]) {
+        // Substring 
+        String str = "HelloWorld";
+        System.out.println(str.substring(0, 5));
+        // System.out.println(substring(str, 0, 5));
+    }
+}
+
+// 10 Print Largest String
+
+/*
+    // Question 3
+        For a given set of Stings, print the largest string.
+        "apple", "mango", "banana"
+*/
+
+import java.util.*;
+
+public class Strings {
+    public static void main(String args[]) {
+        String fruits[] = {"Apple", "Mango", "Banana"};
+
+        String largest = fruits[0];
+        for(int i=0; i<fruits.length; i++) {
+            if(largest.compareTo(fruits[i]) < 0) {
+                largest = fruits[i];
+            }
+        }
+        System.out.println(largest);
+    }
+}
+
+// 11 Why Strings are Immutable ?
+
+/*
+    // What are Strings ?
+*/
