@@ -1,0 +1,30 @@
+// 01 Introduction to Bit Manipulation
+
+/*
+    // BIT MANIPULATION
+*/
+
+/*
+    // Binary Number System
+        0 & 1
+*/
+
+// 02 Binary Number System
+
+/*
+    // Binary Number System 0 & 1
+        Decimal to Binary (4)   Binary to Decimal (100)
+*/
+
+// 03 Bitwise Operators
+
+/* 
+    // Bit-wise Operators
+
+        Binary AND &
+        Binary OR |
+        Binary XOR ^
+        Binary One's Complement ~
+        Binary Left Shift <<
+        Binary Right Shift >>
+*/
