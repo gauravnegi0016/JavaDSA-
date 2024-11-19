@@ -28,3 +28,48 @@
         Binary Left Shift <<
         Binary Right Shift >>
 */
+
+// 04 Binary AND
+
+/*
+    // Binary AND &
+        Rules   5 & 6   A = 0101    B = 0110
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static void main(String args[]) {
+        System.out.println((5 & 6));
+    }
+}
+
+// 05 Binary OR
+
+/*
+    // Binary OR |
+        Rules   5 | 6   A = 0101    B = 0110
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static void main(String args[]) {
+        System.out.println((5 | 6));
+    }
+}
+
+// 06 Binary XOR
+
+/*
+    // Binary XOR ^
+        Rules   5 ^ 6   A = 0101    B = 0110
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static void main(String args[]) {
+        System.out.println((5 ^ 6));
+    }
+}
