@@ -73,3 +73,48 @@ public class BitManipulation {
         System.out.println((5 ^ 6));
     }
 }
+
+// 07 Binary 1's Complement
+
+/*
+    // Binary One's Complement ~
+        Rules   -5  A = 0101
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static void main(String args[]) {
+        System.out.println((~5));
+    }
+}
+
+// 08 Binary Left Shift 
+
+/*
+    // Binary Left Shift <<
+        Rules   5<<2    A = 000101
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static void main(String args[]) {
+        System.out.println((5<<2));
+    }
+}
+
+// 09 Binary Right Shift 
+
+/*
+    // Binary Left Shift >>
+        Rules   6>>1    A = 000101
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static void main(String args[]) {
+        System.out.println((6>>1));
+    }
+}
