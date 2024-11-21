@@ -118,3 +118,56 @@ public class BitManipulation {
         System.out.println((6>>1));
     }
 }
+
+// 10 Get ith Bit
+
+/*
+    // Operations
+        Get ith bit
+        Set ith bit
+        Clear ith bit
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static int getIthBit(int n, int i) {
+        int bitMask = 1<<i;
+        if((n & bitMask) == 0) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+    public static void main(String args[]) {
+        System.out.println(getIthBit(10, 2));
+    }
+}
+
+// 11 Set ith Bit
+
+import java.util.*;
+
+public class BitManipulation {
+    public static int setIthBit(int n, int i) {
+        int bitMask = 1<<i;
+        return n | bitMask;
+    }
+    public static void main(String args[]) {
+        System.out.println(setIthBit(10, 2));
+    }
+}
+
+// 12 Clear ith Bit 
+
+import java.util.*;
+
+public class BitManipulation {
+    public static int clearIthBit(int n, int i) {
+        int bitMask = ~(1<<i);
+            return n & bitMask;
+    }
+    public static void main(String args[]) {
+        System.out.println(clearIthBit(10, 1));
+    }
+}
