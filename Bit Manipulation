@@ -119,7 +119,32 @@ public class BitManipulation {
     }
 }
 
-// 10 Get ith Bit
+// 10 Check if Odd or Even
+
+/*
+    // Question
+        Check if a number is Odd or Even
+*/
+import java.util.*;
+
+public class BitManipulation {
+    public static void oddOrEven(int n) {
+        int bitMask = 1;
+        if((n & bitMask) == 0) {
+            // even number
+            System.out.println("even number");
+        } else {
+            // odd number
+            System.out.println("odd number");
+        }
+    }
+    public static void main(String args[]) {
+        oddOrEven(2);
+        oddOrEven(3);
+    }
+}
+
+// 11 Get ith Bit
 
 /*
     // Operations
@@ -144,7 +169,7 @@ public class BitManipulation {
     }
 }
 
-// 11 Set ith Bit
+// 12 Set ith Bit
 
 import java.util.*;
 
@@ -158,7 +183,7 @@ public class BitManipulation {
     }
 }
 
-// 12 Clear ith Bit 
+// 13 Clear ith Bit 
 
 import java.util.*;
 
@@ -172,7 +197,7 @@ public class BitManipulation {
     }
 }
 
-// 13 Update ith Bit
+// 14 Update ith Bit
 
 /*
     // Update ith bit
@@ -198,7 +223,7 @@ public class BitManipulation {
     }
 }
 
-// 14 Clear last i bits
+// 15 Clear last i bits
 
 /*
     // Clear Last i bits
@@ -217,7 +242,7 @@ public class BitManipulation {
     }
 }
 
-// 15 Clear range of bits
+// 16 Clear range of bits
 
 /*
     // Clear Range of bits
@@ -235,5 +260,48 @@ public class BitManipulation {
     }
     public static void main(String args[]) {
         System.out.println(clearBitsinRange(10, 2, 4));
+    }
+}
+
+// 17 Check if a number is power of 2 or not
+
+/*
+    // Question 2
+        Check if a number is a Power of 2 or not.
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static boolean isPowerOfTwo(int n) {
+        return (n&(n-1)) == 0;
+    }
+    public static void main(String args[]) {
+        System.out.println(isPowerOfTwo(8));
+    }
+}
+
+// 18 Count srt bits in a number
+
+/*
+    // Question 3
+        Count Set Bits in a Number
+*/
+
+import java.util.*;
+
+public class BitManipulation {
+    public static int countSetBits(int n) {
+        int count = 0;
+        while(n > 0) {
+            if((n & 1) != 0) {  // check oue LSB
+                count++;
+            }
+            n = n>>1;
+        }
+        return count;
+    }
+    public static void main(String args[]) {
+        System.out.println(countSetBits(10));
     }
 }
