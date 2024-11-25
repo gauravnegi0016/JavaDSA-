@@ -56,3 +56,84 @@ class Student {
         percentage = (phy + chem + math) / 3;
     }
 }
+
+// 02 Accrss Modifiers
+
+/*
+    // Accrss Modifiers
+
+        Accrss Modifier    within class    within package      outside package by subclass only    outside package
+        Private             Y               N                   N                                   N
+        Default             Y               Y                   N                                   N
+        Protected           Y               Y                   Y                                   N
+        Public              Y               Y                   Y                                   Y
+*/
+
+public class OOPS {
+    public static void main(String args[]) {
+        BankAccount myAcc = new BankAccount();
+        myAcc.username = "ShradhaKhapra";
+        myAcc.setPassword("abcdefghi");
+    }
+}
+
+class BankAccount {
+    public String username;
+    private String Password;
+    default void setPassword(String pwd) {
+        Password = pwd;
+    }
+}
+
+// 03 Getters & Setters
+
+/*
+    // Getters & Setters
+        Get : to return the value
+        Set : to modify the value
+
+        this : this keyword is used to refer to 
+        the current object 
+*/
+
+public class OOPS {
+    public static void main(String args[]) {
+        Pen p1 = new Pen();
+        p1.setColor("Blue");
+        System.out.println(p1.getColor());
+        p1.setTip(5);
+        System.out.println(p1.getTip());
+        // p1.setColor("Yellow");
+        p1.setColor("Yellow");
+        System.out.println(p1.getColor());
+    }
+}
+
+class Pen {
+    private String color;
+    int tip;
+
+    int getColor() {
+        return this.color;
+    }
+
+    int getTip() {
+        return this.tip;
+    }
+    
+    void setColor(String newColor) {
+        this.color = newColor;
+    }
+
+    void setTip(int tip) {
+        this.tip = tip;;
+    }
+}
+
+// 04 Encapsulation
+
+/*
+    // Encapsulation
+        Encapsulation is defined as the wrapping up of data & methods under a
+        single unit. It also implements data hiding.
+*/
