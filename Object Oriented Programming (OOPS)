@@ -551,3 +551,61 @@ class Calculator {
         return a+b+c;
     }
 }
+
+// 17 Method Overriding
+
+/*
+    // Method Overriding
+        Parent and dhild classes both contain tha same function with a
+        different definition.
+*/
+
+public class OOPS {
+    public static void main(String args[]) {
+        Deer d = new Deer();
+            d.eat();
+    }
+}
+
+class Animal {
+    void eat() {
+        System.out.println("eats anything");
+    }
+}
+
+class Deer extends Animal {
+    void eat() {
+        System.out.println("eats grass");
+    }
+}
+
+// 18 Packages in Java
+
+/*
+    // Packages in Java
+        Package is a group of similar types of classes, interfaces
+        and sub-packages.
+*/
+
+package myPackage;
+
+import java.util.*;
+
+public class OOPS {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        System.out.println(a);
+    }
+}
+
+// 19 Abstraction
+
+/*
+    // Abstraction
+        Hiding all the unnecessary details and showing only the
+        important parts to the user.
+                    /           \
+                   /             \
+            Abstract Classes    Interfaces
+*/
