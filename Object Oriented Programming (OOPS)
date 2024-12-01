@@ -609,3 +609,14 @@ public class OOPS {
                    /             \
             Abstract Classes    Interfaces
 */
+
+// 20 Abstract Classes 
+
+/*
+    // Abstract Classes
+        - Cannot create an instance class
+
+        - Can have abstract/non-abstract methods
+
+        - Can have constructors 
+*/
