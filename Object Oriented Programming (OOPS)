@@ -620,3 +620,24 @@ public class OOPS {
 
         - Can have constructors 
 */
+
+public class OOPS {
+    public static void main(String args[]){
+
+    }
+}
+
+abstract class Animal {
+    void eat() {
+        System.out.ptintln("animal eats");
+    }
+    abstract void walk();
+}
+
+class Horse extend Animal {
+    void walk() {
+        System.out.println("walks on 4 legs");
+    }
+}
+
+
